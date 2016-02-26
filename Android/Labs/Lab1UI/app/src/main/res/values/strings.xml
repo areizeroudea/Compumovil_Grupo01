@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Lab1UI</string>
+    <string name="txtNombres">Nombres:</string>
+    <string name="txtApellidos">Apellidos:</string>
+    <string name="txtSexo">Sexo:</string>
+    <string name="txtHombre">Hombre</string>
+    <string name="txtMujer">Mujer</string>
+    <string name="txtFecha">Fecha de Nacimiento:</string>
+    <string name="txtPais">Pais:</string>
+    <string name="txtTelefono">Telefono:</string>
+    <string name="txtDireccion">Direccion:</string>
+    <string name="txtEmail">Email:</string>
+    <string name="txtHobbies">Hobbies:</string>
+    <string name="txtFavorito">Favorito:</string>
 </resources>
