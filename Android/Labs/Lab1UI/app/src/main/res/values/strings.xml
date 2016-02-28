@@ -12,4 +12,5 @@
     <string name="txtEmail">Email:</string>
     <string name="txtHobbies">Hobbies:</string>
     <string name="txtFavorito">Favorito:</string>
+    <string name="defaultDate">click para asignar..</string>
 </resources>

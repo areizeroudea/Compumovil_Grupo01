@@ -77,21 +77,23 @@
                 android:id="@+id/textView2"
                 android:layout_centerVertical="true" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/defaultDate"
+                android:id="@+id/dateDisplay"
+                android:onClick="onClick"
+                android:layout_below="@+id/textView2"
+                android:layout_alignLeft="@+id/radioButton2"
+                android:layout_alignStart="@+id/radioButton2"
+                android:textColor="#141313"
+                android:textStyle="italic" />
+
             <AutoCompleteTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/Paises"
                 />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/dateDisplay"
-                android:layout_below="@+id/textView2"
-                android:layout_alignLeft="@+id/radioButton2"
-                android:layout_alignStart="@+id/radioButton2"
-                android:onClick="onDateSet"/>
-
 
         </RelativeLayout>
     </LinearLayout>
