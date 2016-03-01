@@ -3,8 +3,8 @@
     <string name="txtNombres">Nombres:</string>
     <string name="txtApellidos">Apellidos:</string>
     <string name="txtSexo">Sexo:</string>
-    <string name="txtHombre">Hombre</string>
-    <string name="txtMujer">Mujer</string>
+    <string name="txtHombre">Masculino</string>
+    <string name="txtMujer">Femenino</string>
     <string name="txtFecha">Fecha de Nacimiento:</string>
     <string name="txtPais">Pais:</string>
     <string name="txtTelefono">Telefono:</string>
@@ -13,4 +13,16 @@
     <string name="txtHobbies">Hobbies:</string>
     <string name="txtFavorito">Favorito:</string>
     <string name="defaultDate">click para asignar..</string>
+    <string name="btnMostrar">Mostrar</string>
+    <string-array name="hobbies_array">
+        <item>Jugar Futbol</item>
+        <item>Tocar Guitarra</item>
+        <item>Ver Television</item>
+        <item>Estudiar</item>
+        <item>Dormir una siesta</item>
+        <item>Comer postres</item>
+        <item>JUgar Videojuegos</item>
+        <item>Otro</item>
+    </string-array>
+
 </resources>
