@@ -12,8 +12,6 @@
     <string name="txtEmail">Email:</string>
     <string name="txtHobbies">Hobbies:</string>
     <string name="txtFavorito">Favorito:</string>
-    <string name="txtFavoritoSi">Si</string>
-    <string name="txtFavoritoNo">No</string>
     <string name="defaultDate">click para asignar..</string>
     <string name="btnMostrar">Mostrar</string>
 
@@ -28,7 +26,6 @@
         <item>Otro</item>
     </string-array>
 
-    <string name="pais">Pais</string>
     <string-array name="countries">
     <item> Afghanistan </item>
     <item> Albania </item>
