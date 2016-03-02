@@ -16,7 +16,10 @@
     <string name="txtFavoritoNo">No</string>
     <string name="defaultDate">click para asignar..</string>
     <string name="btnMostrar">Mostrar</string>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 31a1cab604d58f252ef18384750f2ba6668dc196
     <string-array name="hobbies_array">
         <item>Jugar Futbol</item>
         <item>Tocar Guitarra</item>
@@ -28,6 +31,7 @@
         <item>Otro</item>
     </string-array>
 
+<<<<<<< HEAD
     <string name="pais">Pais</string>
     <string-array name="countries">
     <item> Afghanistan </item>
@@ -226,4 +230,6 @@
     <item> Zimbabwe </item>
     </string-array>
 
+=======
+>>>>>>> 31a1cab604d58f252ef18384750f2ba6668dc196
 </resources>

@@ -6,9 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+<<<<<<< HEAD
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CheckBox;
+=======
+import android.widget.Button;
+>>>>>>> 31a1cab604d58f252ef18384750f2ba6668dc196
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -31,8 +35,12 @@ public class MailActivity extends AppCompatActivity implements DatePickerDialog.
     private TextView txtInformacion;
     private RadioButton radioHombre;
     private RadioButton radioMujer;
+<<<<<<< HEAD
     private Spinner spinner;
     private AutoCompleteTextView autoPais;
+=======
+    private Spinner spinHobbies;
+>>>>>>> 31a1cab604d58f252ef18384750f2ba6668dc196
 
 
 
@@ -43,6 +51,7 @@ public class MailActivity extends AppCompatActivity implements DatePickerDialog.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mail);
         establecerReferencias();
+<<<<<<< HEAD
 
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -62,6 +71,10 @@ public class MailActivity extends AppCompatActivity implements DatePickerDialog.
         autoPais.setAdapter(adapter2);
         autoPais.setThreshold(1);
 
+=======
+        spinHobbies.setOnItemClickListener(R.id.spinner);
+
+>>>>>>> 31a1cab604d58f252ef18384750f2ba6668dc196
     }
 
     public void establecerReferencias(){
@@ -72,7 +85,11 @@ public class MailActivity extends AppCompatActivity implements DatePickerDialog.
         txtInformacion = (TextView) findViewById(R.id.textView3);
         radioHombre = (RadioButton) findViewById(R.id.radio_hombre);
         radioMujer = (RadioButton) findViewById(R.id.radio_mujer);
+<<<<<<< HEAD
         spinner = (Spinner) findViewById(R.id.spinner);
+=======
+        spinHobbies = (Spinner) findViewById(R.id.spinner);
+>>>>>>> 31a1cab604d58f252ef18384750f2ba6668dc196
     }
     private String sexo;
     public void onRadioButtonClicked(View view) {
@@ -90,12 +107,16 @@ public class MailActivity extends AppCompatActivity implements DatePickerDialog.
         }
     }
 
+<<<<<<< HEAD
 
     String hobbie;
+=======
+>>>>>>> 31a1cab604d58f252ef18384750f2ba6668dc196
     public void mostrarInformacion(View v){
         String Nombres = editNombres.getText().toString();
         String Apellidos = editApellidos.getText().toString();
         String Fecha = mDateDisplay.getText().toString();
+<<<<<<< HEAD
         hobbie = spinner.getSelectedItem().toString();
         String pais = autoPais.getText().toString();
         String favorito;
@@ -111,6 +132,12 @@ public class MailActivity extends AppCompatActivity implements DatePickerDialog.
                                "Hobbie: "+hobbie+System.getProperty("line.separator")+
                                "Favorito: "+favorito+System.getProperty("line.separator")+
                                "Pais: "+pais);
+=======
+        txtInformacion.setText("Nombres: "+Nombres + System.getProperty("line.separator")+
+                               "Apellidos: "+Apellidos+ System.getProperty("line.separator")+
+                               "Sexo: "+sexo+System.getProperty("line.separator")+
+                               "Fecha: "+Fecha);
+>>>>>>> 31a1cab604d58f252ef18384750f2ba6668dc196
     }
 
     /*Identificamos cuando se hace click sobre algun elemento*/
