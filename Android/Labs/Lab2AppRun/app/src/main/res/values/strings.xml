@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Lab2AppRun</string>
+    <!-- Strings related to login -->
+    <string name="txtUserText">Usuario</string>
+    <string name="txtPasswordText">Contraseña</string>
+    <string name="btnSignInText">Ingresar</string>
+    <string name="btnRegisterText">Registrarse</string>
+    <string name="txtUsrRegText">Usuario</string>
+    <string name="txtEmailRegHint">Correo electronico</string>
+
+</resources>
