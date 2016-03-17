@@ -35,11 +35,9 @@ public class LoginActivity extends AppCompatActivity
         });
 
         Button regBtn = (Button) findViewById(R.id.btnRegister);
-        regBtn.setOnClickListener(new OnClickListener()
-        {
+        regBtn.setOnClickListener(new OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 showRegisterView();
             }
         });
@@ -53,8 +51,18 @@ public class LoginActivity extends AppCompatActivity
 
     private void doLogin()
     {
+        if(validateLogin())
+        {
+            Intent intent = new Intent(this, RaceActivity.class);
+            this.startActivity(intent);
+        }
+    }
+
+    private boolean validateLogin()
+    {
         String passTxt = passwordView.getText().toString();
         String usrTxt = userView.getText().toString();
+        return true;
     }
 }
 
