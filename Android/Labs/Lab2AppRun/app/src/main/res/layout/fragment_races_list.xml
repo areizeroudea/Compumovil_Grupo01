@@ -1,25 +1,25 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="lab2apprun.gr01.compumovil.udea.edu.co.lab2apprun.RacesListFragment">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CARRERAS"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20dp"
+        android:textIsSelectable="false"
+        android:textStyle="bold" />
 
-    <LinearLayout
-        android:orientation="vertical"
+    <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal|top"
-        android:weightSum="1">
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        />
 
-        <TextView
-            android:layout_width="293dp"
-            android:layout_height="268dp"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Large Text"
-            android:id="@+id/textView"
-            android:layout_gravity="center_horizontal"
-            android:textColor="#020202"
-            android:textSize="100dp" />
-    </LinearLayout>
-</FrameLayout>
+</LinearLayout>

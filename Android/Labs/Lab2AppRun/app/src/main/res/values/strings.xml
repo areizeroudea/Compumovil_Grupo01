@@ -7,10 +7,34 @@
     <string name="btnRegisterText">Registrarse</string>
     <string name="txtUsrRegText">Usuario</string>
     <string name="txtEmailRegHint">Correo electronico</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="nav_race">Carreras</string>
     <string name="nav_profile">Perfil</string>
     <string name="nav_about">Acerca de</string>
+    <string name="itemNameText">Carrera</string>
+    <string name="itemDistanceText">Distancia</string>
+    <string name="itemDateText">Fecha</string>
+    <string name="itemPlaceText">Lugar</string>
+
+    <string-array name="colors">
+        <item>red</item>
+        <item>orange</item>
+        <item>yellow</item>
+        <item>green</item>
+        <item>blue</item>
+        <item>indigo</item>
+        <item>violet</item>
+        <item>aqua</item>
+        <item>black</item>
+        <item>fuchsia</item>
+        <item>gray</item>
+        <item>grey</item>
+        <item>lime</item>
+        <item>maroon</item>
+        <item>navy</item>
+        <item>olive</item>
+        <item>purple</item>
+        <item>silver</item>
+        <item>teal</item>
+        <item>white</item>
+    </string-array>
 </resources>
