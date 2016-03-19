@@ -2,6 +2,7 @@ package lab2apprun.gr01.compumovil.udea.edu.co.lab2apprun;
 
 
 import android.app.ListFragment;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -32,7 +33,11 @@ public class RacesListFragment extends Fragment implements AdapterView.OnItemCli
     {
         super.onActivityCreated(savedInstanceState);
         /*Creamos el adapter para los items*/
-        ArrayAdapter adapter = ArrayAdapter.createFromResource(getActivity(), R.array.colors, android.R.layout.simple_list_item_1);
+        String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
+                "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
+                "Linux", "OS/2" };
+        //ArrayAdapter adapter = ArrayAdapter.createFromResource(getActivity(), R.array.colors, android.R.layout.simple_list_item_1);
+        ArrayAdapter adapter = new RacesListAdapter(getActivity(), values);
         listView =(ListView) getActivity().findViewById(R.id.listView);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);

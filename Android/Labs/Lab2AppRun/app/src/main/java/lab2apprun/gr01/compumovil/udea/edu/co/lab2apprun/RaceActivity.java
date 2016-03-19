@@ -1,6 +1,5 @@
 package lab2apprun.gr01.compumovil.udea.edu.co.lab2apprun;
 
-import android.app.ListFragment;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -11,10 +10,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 public class RaceActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
