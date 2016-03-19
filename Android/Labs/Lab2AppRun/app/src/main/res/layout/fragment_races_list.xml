@@ -6,10 +6,31 @@
     android:orientation="vertical"
     tools:context="lab2apprun.gr01.compumovil.udea.edu.co.lab2apprun.RacesListFragment">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnCreateRaceText"
+            android:id="@+id/btnCreateRace"
+            android:layout_weight="1"
+            android:onClick="goToCreateRace"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnLogoutText"
+            android:id="@+id/btnLogout"
+            android:layout_weight="1" />
+    </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CARRERAS"
+        android:text="@string/textViewText"
         android:id="@+id/textView"
         android:layout_gravity="center_horizontal"
         android:textSize="20dp"

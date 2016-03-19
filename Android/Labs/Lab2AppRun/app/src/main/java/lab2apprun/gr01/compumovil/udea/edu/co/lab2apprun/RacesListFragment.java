@@ -5,13 +5,19 @@ import android.app.ListFragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import java.util.List;
 
 
 /**
@@ -31,13 +37,20 @@ public class RacesListFragment extends Fragment implements AdapterView.OnItemCli
     @Override
     public void onActivityCreated(Bundle savedInstanceState)
     {
+        //Indicamos el DAO para races
+        RaceDAO dao = new RaceDAO(getActivity());
+        Log.d("RaceListFragment", "Dao Creado");
+
         super.onActivityCreated(savedInstanceState);
         /*Creamos el adapter para los items*/
-        String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
-                "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
-                "Linux", "OS/2" };
+        dao.open();
+        //dao.insertRace(new Race(0, "CarreraTest", "2015", "Desc", "23KM", "Lugar", "15353", "sdf@email.com"));
+        List<Race> races = dao.getAllRaces();
+        dao.close();
+
+        /*Establecemos el adaptador de items*/
         //ArrayAdapter adapter = ArrayAdapter.createFromResource(getActivity(), R.array.colors, android.R.layout.simple_list_item_1);
-        ArrayAdapter adapter = new RacesListAdapter(getActivity(), values);
+        ArrayAdapter adapter = new RacesListAdapter(getActivity(), races);
         listView =(ListView) getActivity().findViewById(R.id.listView);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);

@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 
 public class RaceActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
@@ -62,5 +63,16 @@ public class RaceActivity extends AppCompatActivity implements NavigationView.On
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void goToCreateRace(View v)
+    {
+        Fragment insertRaceFrag = new RaceInsertFragment();
+
+        FragmentManager fragmentManager = getSupportFragmentManager();  //necesario9 para crear el transaction
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();   //necesario para manipular freagments
+        fragmentTransaction.replace(R.id.content_frame, insertRaceFrag);
+        fragmentTransaction.addToBackStack("Este es un key inutil");    //necesario para que los fragments tengan retroceso
+        fragmentTransaction.commit();
     }
 }

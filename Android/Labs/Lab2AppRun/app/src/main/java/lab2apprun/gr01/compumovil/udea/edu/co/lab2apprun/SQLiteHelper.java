@@ -13,12 +13,13 @@ public class SQLiteHelper extends SQLiteOpenHelper
 {
     /*Database*/
     private static final String DATABASE_NAME = "races.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     /*Tabla RACE*/
     public static final String TABLE_RACE = "race";
     public static final String COLUMN_ID = "_id";
     public static final String COLUMN_RACE_NAME = "race_name";
+    public static final String COLUMN_RACE_DATE = "race_date";
     public static final String COLUMN_RACE_DESC = "race_description";
     public static final String COLUMN_RACE_DIST = "race_distance";
     public static final String COLUMN_RACE_PLACE = "race_place";
@@ -35,7 +36,7 @@ public class SQLiteHelper extends SQLiteOpenHelper
     private static final String DATABASE_CREATE =
             "create table " + TABLE_RACE +
                     "(" + COLUMN_ID + " integer primary key autoincrement, " + COLUMN_RACE_NAME + " text not null," +
-                    COLUMN_RACE_DESC + " text not null," + COLUMN_RACE_DIST + " text not null," +
+                    COLUMN_RACE_DATE + " text not null," + COLUMN_RACE_DESC + " text not null," + COLUMN_RACE_DIST + " text not null," +
                     COLUMN_RACE_PLACE + " text not null," + COLUMN_RACE_CPHONE + " text not null," +
                     COLUMN_RACE_CEMAIL + " text not null" +");";
 

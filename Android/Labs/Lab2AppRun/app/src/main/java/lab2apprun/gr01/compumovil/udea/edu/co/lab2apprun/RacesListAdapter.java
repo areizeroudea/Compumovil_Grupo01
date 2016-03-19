@@ -7,15 +7,17 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.util.List;
+
 /**
  * Created by areizero on 18/03/2016.
  */
-public class RacesListAdapter extends ArrayAdapter<String>
+public class RacesListAdapter extends ArrayAdapter<Race>
 {
     private final Context context;
-    private final String[] values;
+    private final List<Race> values;
 
-    public RacesListAdapter(Context context, String[] values)
+    public RacesListAdapter(Context context, List<Race> values)
     {
         super(context, -1, values);
         this.context = context;
@@ -32,7 +34,11 @@ public class RacesListAdapter extends ArrayAdapter<String>
         TextView itemDistance = (TextView) itemView.findViewById(R.id.itemDistance);
         TextView itemPlace = (TextView) itemView.findViewById(R.id.itemPlace);
 
-        itemName.setText("A-"+position);
+        Race race = values.get(position);
+        itemName.setText("Carrera: " + race.getName().toString());
+        itemDate.setText("Fecha: " + race.getDate().toString());
+        itemDistance.setText("Distancia: " + race.getDistance().toString());
+        itemPlace.setText("Lugar: " + race.getPlace().toString());
 
         return itemView;
     }

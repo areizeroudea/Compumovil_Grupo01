@@ -14,6 +14,9 @@
     <string name="itemDistanceText">Distancia</string>
     <string name="itemDateText">Fecha</string>
     <string name="itemPlaceText">Lugar</string>
+    <string name="btnCreateRaceText">Agregar Carrera</string>
+    <string name="btnLogoutText">Logout</string>
+    <string name="textViewText">CARRERAS</string>
 
     <string-array name="colors">
         <item>red</item>
@@ -37,4 +40,7 @@
         <item>teal</item>
         <item>white</item>
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

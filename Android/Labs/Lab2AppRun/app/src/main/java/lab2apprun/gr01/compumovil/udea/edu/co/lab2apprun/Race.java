@@ -12,6 +12,23 @@ public class Race
     private String place;
     private String contactPhone;
     private String contactEmail;
+    private String date;
+
+    public Race()
+    {
+    }
+
+    public Race(long id, String name, String descripion, String distance, String place, String contactPhone, String contactEmail, String date)
+    {
+        this.id = id;
+        this.name = name;
+        this.descripion = descripion;
+        this.distance = distance;
+        this.place = place;
+        this.contactPhone = contactPhone;
+        this.contactEmail = contactEmail;
+        this.date = date;
+    }
 
     public String getName() {
         return name;
@@ -67,5 +84,13 @@ public class Race
 
     public void setContactEmail(String contactEmail) {
         this.contactEmail = contactEmail;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }
