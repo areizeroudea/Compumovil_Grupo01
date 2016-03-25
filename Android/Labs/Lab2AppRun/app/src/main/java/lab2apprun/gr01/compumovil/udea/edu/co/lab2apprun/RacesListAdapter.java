@@ -24,6 +24,12 @@ public class RacesListAdapter extends ArrayAdapter<Race>
         this.values = values;
     }
 
+    public Race getRace(int position)
+    {
+        Race race = values.get(position);
+        return race;
+    }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent)
     {

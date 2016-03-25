@@ -17,6 +17,7 @@
     <string name="btnCreateRaceText">Agregar Carrera</string>
     <string name="btnLogoutText">Logout</string>
     <string name="textViewText">CARRERAS</string>
+    <string name="txvRCTitleText">Contacto</string>
 
     <string-array name="colors">
         <item>red</item>
@@ -43,4 +44,20 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txtRNameText">Nombre</string>
+    <string name="txtRDescriptionText">Descripcion</string>
+    <string name="txtRDistanceHint">Distancia (m)</string>
+    <string name="txtRPlace">Lugar</string>
+    <string name="txtRDateHint">Fecha</string>
+    <string name="txtRCPhoneHint">Telefono</string>
+    <string name="txtRCEmailHint">Correo electronico</string>
+    <string name="btnRAddText">Registrar</string>
+    <string name="txvRTitleText">Carrera</string>
+    <string name="txvName">Nombre:</string>
+    <string name="txvDesc">Descripción:</string>
+    <string name="txvDist">Distancia:</string>
+    <string name="txvPlace">Lugar:</string>
+    <string name="txvDate">Fecha:</string>
+    <string name="txvCPhone">Telefono:</string>
+    <string name="txvCEmail">Correo electronico:</string>
 </resources>

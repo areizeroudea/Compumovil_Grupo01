@@ -55,6 +55,16 @@ public class RaceDAO
         return newRace;
     }
 
+    public Race getRaceById(long id)
+    {
+        Cursor cursor = database.query(SQLiteHelper.TABLE_RACE,
+                allColumns, SQLiteHelper.COLUMN_ID + " = " + id, null, null, null, null);
+        cursor.moveToFirst();
+        Race newRace = cursorToRace(cursor);
+        cursor.close();
+        return newRace;
+    }
+
     public List<Race> getAllRaces()
     {
         List<Race> races = new ArrayList<Race>();

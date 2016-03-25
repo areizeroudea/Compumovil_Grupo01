@@ -26,6 +26,7 @@ import java.util.List;
 public class RacesListFragment extends Fragment implements AdapterView.OnItemClickListener
 {
     ListView listView;
+    RacesListAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -50,7 +51,7 @@ public class RacesListFragment extends Fragment implements AdapterView.OnItemCli
 
         /*Establecemos el adaptador de items*/
         //ArrayAdapter adapter = ArrayAdapter.createFromResource(getActivity(), R.array.colors, android.R.layout.simple_list_item_1);
-        ArrayAdapter adapter = new RacesListAdapter(getActivity(), races);
+        adapter = new RacesListAdapter(getActivity(), races);
         listView =(ListView) getActivity().findViewById(R.id.listView);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);
@@ -59,6 +60,11 @@ public class RacesListFragment extends Fragment implements AdapterView.OnItemCli
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id)
     {
-        Toast.makeText(getActivity(), "Item: " + position, Toast.LENGTH_SHORT).show();
+        Race item = adapter.getRace(position);
+        //Toast.makeText(getActivity(), "Item: " + item.getId() + " - " + item.getName(), Toast.LENGTH_SHORT).show();
+
+        RaceActivity rAct = (RaceActivity) getActivity();
+        //rAct.goToCreateRace(view);
+        rAct.viewRaceDetail(view, item);
     }
 }
