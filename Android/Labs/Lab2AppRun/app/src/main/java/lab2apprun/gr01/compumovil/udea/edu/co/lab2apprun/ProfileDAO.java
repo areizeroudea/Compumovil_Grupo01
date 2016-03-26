@@ -59,6 +59,23 @@ public class ProfileDAO
         return newProfile;
     }
 
+public List<Profile> getAllProfiles()
+    {
+        List<Profile> profs = new ArrayList<Profile>();
+        Cursor cursor = database.query(SQLiteHelper.TABLE_PROFILE, allColumns, null, null, null, null, null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast())
+        {
+            Profile raceGet = cursorToProfile(cursor);
+            profs.add(raceGet);
+            cursor.moveToNext();
+        }
+        // make sure to close the cursor
+        cursor.close();
+        return profs;
+    }
+
+
     public Profile getProfileByUserName(String username)
     {
         String query = "SELECT * FROM " + SQLiteHelper.TABLE_PROFILE + " WHERE " + SQLiteHelper.COLUMN_PR_USERNAME + " = " + "areiza";
