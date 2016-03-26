@@ -13,11 +13,11 @@ public class SQLiteHelper extends SQLiteOpenHelper
 {
     /*Database*/
     private static final String DATABASE_NAME = "races.db";
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 5;
+    public static final String COLUMN_ID = "_id";
 
     /*Tabla RACE*/
     public static final String TABLE_RACE = "race";
-    public static final String COLUMN_ID = "_id";
     public static final String COLUMN_RACE_NAME = "race_name";
     public static final String COLUMN_RACE_DATE = "race_date";
     public static final String COLUMN_RACE_DESC = "race_description";
@@ -33,12 +33,16 @@ public class SQLiteHelper extends SQLiteOpenHelper
     public static final String COLUMN_PR_EMAIL = "pr_email";
 
     // Database creation sql statement
-    private static final String DATABASE_CREATE =
+    private static final String DATABASE_CREATE_RACE =
             "create table " + TABLE_RACE +
                     "(" + COLUMN_ID + " integer primary key autoincrement, " + COLUMN_RACE_NAME + " text not null," +
                     COLUMN_RACE_DATE + " text not null," + COLUMN_RACE_DESC + " text not null," + COLUMN_RACE_DIST + " text not null," +
                     COLUMN_RACE_PLACE + " text not null," + COLUMN_RACE_CPHONE + " text not null," +
                     COLUMN_RACE_CEMAIL + " text not null" +");";
+    private static final String DATABASE_CREATE_PROFILE =
+            "create table " + TABLE_PROFILE +
+                    "(" + COLUMN_ID + " integer primary key autoincrement, " + COLUMN_PR_USERNAME + " text not null," +
+                    COLUMN_PR_PASS + " text not null," + COLUMN_PR_EMAIL + " text not null"+");";
 
     public SQLiteHelper(Context context)
     {
@@ -48,7 +52,8 @@ public class SQLiteHelper extends SQLiteOpenHelper
     @Override
     public void onCreate(SQLiteDatabase db)
     {
-        db.execSQL(DATABASE_CREATE);
+        db.execSQL(DATABASE_CREATE_RACE);
+        db.execSQL(DATABASE_CREATE_PROFILE);
     }
 
     @Override

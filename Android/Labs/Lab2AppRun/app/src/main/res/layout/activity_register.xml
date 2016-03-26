@@ -44,7 +44,8 @@
             android:layout_height="wrap_content"
             android:text="@string/btnRegisterText"
             android:id="@+id/btnReg"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:onClick="createProfile"/>
     </LinearLayout>
 
 </RelativeLayout>

@@ -60,8 +60,15 @@ public class LoginActivity extends AppCompatActivity
 
     private boolean validateLogin()
     {
-        String passTxt = passwordView.getText().toString();
-        String usrTxt = userView.getText().toString();
+        String pass = passwordView.getText().toString();
+        String usr = userView.getText().toString();
+
+        ProfileDAO dao = new ProfileDAO(this);
+        dao.open();
+        Profile profile = dao.getProfileByUserName(usr);
+        dao.close();
+
+
         return true;
     }
 }
